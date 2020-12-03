@@ -1,9 +1,14 @@
-<nav>
-    //image here for zen squirrel logo
-    <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>Home</a>
-    <% if (user) { %>
-      <a href="/logout">LOG OUT</a>
-    <% } else { %>
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-    <% } %>
-  </nav>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+<nav id="navbar">
+  <img id="logo" src="https://i.imgur.com/NMDvawR.png" alt="">
+  <div id="links">
+  <% if (user) { %>
+    <a href="/">HOME</a>
+    <a href="/logout">LOG OUT</a>
+  <% } else { %>
+    <a href="/auth/google">LOG IN</a>
+  <% } %>
+  </div>
+</nav>
+

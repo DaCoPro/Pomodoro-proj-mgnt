@@ -1,19 +1,48 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+
 }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
+  background-color: #E5EAED;
+}
+
+header {
+  background-color: #f7F8F9;
+  height: 70px;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+}
+#logo {
+  padding-left: 20px;
+}
+#navbar #links {
+  margin-left: auto;
+  padding-right: 20px;
+  font-size: 20px;
+}
+#navbar img {
+  height: 30px;
+}
+#logo {
+  height: 50px;
+}
+
+
 
 a {
-  color: #00B7FF;
+  color: black;
 }
-
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
+a:link {
+  text-decoration: none;
 }
-
-.login img {
-  height: 30px;
+a:hover {
+  color: red;
 }
