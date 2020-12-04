@@ -1,7 +1,14 @@
 <link rel='stylesheet' href='/stylesheets/style.css' />
 
 <nav id="navbar">
-  <img id="logo" src="https://i.imgur.com/NMDvawR.png" alt="">
+  <% if (user) { %>
+    <img class="logo" src="https://i.imgur.com/NMDvawR.png" alt="">
+    <h1>Zen Squirrel</h1>
+  <% } else { %>
+    <img class="logo" src="https://i.imgur.com/NMDvawR.png" alt="">
+    <h1>Zen Squirrel: Pomodoro Inspired Project Management</h1>
+    <style>h1 {margin-left: 155px;}</style>
+  <% } %>
   <div id="links">
   <% if (user) { %>
     <a href="/">HOME</a>
