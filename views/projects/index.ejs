@@ -17,11 +17,11 @@
           <h3><a href="/projects/<%= p._id %>"><%=  p.name %></a></h3>
         <% } %>
       <% }); %> 
+      <br>
+      <form action="/"></form>
+      <a href="/projects/new">ADD PROJECT</a>
+      
 
-      <form action="/projects" method="POST">
-        <input type="text" name="name">
-        <input type="submit" value="Add Project">
-      </form>
     </main>
 
     <footer>

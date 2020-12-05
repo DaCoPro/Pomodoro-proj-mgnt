@@ -3,8 +3,15 @@ const Project = require('../models/project');
 module.exports = {
     index,
     createProject,
-    show
+    show,
+    new: newProject
 }
+
+
+function newProject(req, res) {
+    res.render('projects/new', {title: 'Add Project'});
+}
+
 function show(req, res) {
     Project.findById(req.params.id, function(err, project) {
         res.render('projects/show', {title: "Project Details", project});

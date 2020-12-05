@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Details</title>
+    <title>New Project</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -11,10 +11,16 @@
     </header>
 
     <main>
-        <h1><%= project.name %></h1>
-        <h2>Goal: <%= project.goal %></h2>
-        
+      <h1>New Project</h1>
+      <form action="/projects" method="POST">
+        <label>Title: </label>
+        <input type="text" name="name">
+        <label>Goal: </label>
+        <input type="text" name="goal"> 
+        <input type="submit" value="Save">
+      </form>
     </main>
+
     <footer>
       <%- include('../partials/footer.ejs') %>
     </footer>

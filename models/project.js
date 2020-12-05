@@ -40,4 +40,4 @@ const projectsSchema = new Schema ({
 }, {timestamps: true
 });
 
-module.exports = mongoose.model('Movie', projectsSchema);
+module.exports = mongoose.model('Project', projectsSchema);
