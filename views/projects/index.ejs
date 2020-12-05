@@ -10,18 +10,30 @@
       <%- include('../partials/header.ejs') %>
     </header>
 
-    <main>
-      <% projects.forEach(function(p) { %> 
+    <main id="projects-body">
+      <div class="projviews">
+        <h1>Projects</h1>
+        <% projects.forEach(function(p) { %> 
+        <% if (user && user._id.equals(p.user)) { %>
         <ul>
             <li><%=  p.name %></li>
         </ul>
-       
+        <% } %>
       <% }); %> 
 
       <form action="/projects" method="POST">
         <input type="text" name="name">
         <input type="submit" value="Add Project">
       </form>
+      </div>
+      <div class="projviews">
+        <h1>Content</h1>
+        <ul>
+          <li>Goal:</li>
+          <li>todo</li>
+          <li>done</li>
+        </ul>
+      </div>
     </main>
 
     <footer>
