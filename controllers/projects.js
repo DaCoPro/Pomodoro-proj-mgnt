@@ -3,6 +3,13 @@ const Project = require('../models/project');
 module.exports = {
     index,
     createProject,
+    show
+}
+function show(req, res) {
+    Project.findById(req.params.id, function(err, project) {
+        res.render('projects/show', {title: "Project Details", project});
+    })
+
 }
 
 function index(req, res) {
@@ -21,5 +28,4 @@ function createProject(req, res) {
       if (err) return res.redirect('/projects');
       res.redirect('/projects');
     });
-
 }

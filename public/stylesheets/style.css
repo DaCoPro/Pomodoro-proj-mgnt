@@ -44,13 +44,3 @@ a:hover {
   color: red;
 }
 
-
-#projects-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.projviews {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
