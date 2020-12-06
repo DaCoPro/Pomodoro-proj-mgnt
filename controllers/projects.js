@@ -4,9 +4,18 @@ module.exports = {
     index,
     createProject,
     show,
-    new: newProject
+    new: newProject,
+    delete: deleteProject
 }
 
+function deleteProject(req, res) {
+    Project.findOne({'_id': req.params.id})
+        .then(function(project) {
+            console.log(project.name);
+            project.remove();
+        })
+    res.redirect(`/projects`)
+}
 
 function newProject(req, res) {
     res.render('projects/new', {title: 'Add Project'});
@@ -20,7 +29,6 @@ function show(req, res) {
 }
 
 function index(req, res) {
-    console.log(req.user._id)
     Project.find({}, function(err, projects) {
         res.render('projects/index', {title: 'All Projects', projects});
     });

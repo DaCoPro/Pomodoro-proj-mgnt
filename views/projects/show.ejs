@@ -21,6 +21,19 @@
           <input type="text" name="name">
           <input type="submit" value="+">
         </form>
+        <h2>Notes:</h2>
+        <% project.notes.forEach(function(n) { %>
+          <h4><%= n.content %></h4>
+        <% }); %>
+        <form action="/projects/<%= project._id %>/notes" method="POST">
+          <input type="text" name="content">
+          <input type="submit" value="+">
+        </form>
+        <br>
+        <br>
+        <form class="deletebtn" action="/projects/<%= project._id %>?_method=DELETE" method="POST">
+          <button type="submit">DELETE</button>
+        </form>
     </main>
     <footer>
       <%- include('../partials/footer.ejs') %>
