@@ -2,6 +2,7 @@ const Project = require('../models/project');
 
 module.exports = {
     create,
+    update
 };
 
 function create (req, res) {
@@ -14,4 +15,9 @@ function create (req, res) {
             res.redirect(`/projects/${project._id}`);
         });
     });
+}
+
+function update() {
+    console.log('Works!')
+    res.redirect(`/projects/${req.params.id}`)
 }
