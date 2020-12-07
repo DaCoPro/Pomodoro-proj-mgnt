@@ -12,12 +12,18 @@
 
     <main>
         <h1><%= project.name %></h1>
+        <% if (project.goal) { %>
         <h2>Goal: <%= project.goal %></h2>
+        <% } %>
         <h2>Tasks:</h2>
         <% project.tasks.forEach(function(t) { %>
-          <form action="/tasks/<%= project.tasks._id %>?_method=PUT" method="POST">
-          <h4><input type="submit" value="done"><%= t.name %></h4>
+          <% if (!t.completed) { %>
+          <form action="/tasks/<%= t._id %>?_method=PUT" method="POST">
+          <ul>
+            <li><input type="submit" value="done"><%= t.name %></li>
+          </ul>
           </form>
+          <% } %> 
         <% }); %>
         <form action="/projects/<%= project._id %>/tasks" method="POST">
           <input type="text" name="name">
@@ -33,8 +39,16 @@
         </form>
         <br>
         <br>
+        
+        <h2>Completed Tasks:</h2>
+        <% project.tasks.forEach(function(t) { %>
+          <% if (t.completed) { %>
+            <h4><%= t.name %></h4>
+          <% } %> 
+        <% }); %>
+
         <form class="deletebtn" action="/projects/<%= project._id %>?_method=DELETE" method="POST">
-          <button type="submit">DELETE</button>
+          <button type="submit">DELETE THIS PROJECT</button>
         </form>
     </main>
     <footer>

@@ -17,7 +17,14 @@ function create (req, res) {
     });
 }
 
-function update() {
-    console.log('Works!')
-    res.redirect(`/projects/${req.params.id}`)
-}
+function update(req, res) {
+    Project.findOne({'tasks._id': req.params.id}, function(err, project) {
+        let task = project.tasks.id(req.params.id);
+        task.completed = true;
+        project.save(function(err) {
+            console.log(task.name);
+            console.log(project.tasks);
+            res.redirect(`/projects/${project._id}`)
+        })
+    })
+};
