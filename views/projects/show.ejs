@@ -21,13 +21,12 @@
         <% if (project.goal) { %>
         <h2>Goal: <%= project.goal %></h2>
         <% } %>
+        <div class="list">
         <h2>Tasks:</h2>
         <% project.tasks.forEach(function(t) { %>
           <% if (!t.completed) { %>
           <form action="/tasks/<%= t._id %>?_method=PUT" method="POST">
-          <ul>
-            <li><input type="submit" value="done"><%= t.name %></li>
-          </ul>
+            <h4><input type="submit" value="done"><%= t.name %></h4>
           </form>
           <% } %> 
         <% }); %>
@@ -35,6 +34,10 @@
           <input type="text" name="name">
           <input type="submit" value="+">
         </form>
+      </div>
+      <br>
+      <br>
+      <div class="list">
         <h2>Notes:</h2>
         <% project.notes.forEach(function(n) { %>
           <h4><%= n.content %></h4>
@@ -43,18 +46,19 @@
           <input type="text" name="content">
           <input type="submit" value="+">
         </form>
+      </div>
         <br>
         <br>
-        
+        <div class="list">
         <h2>Completed Tasks:</h2>
         <% project.tasks.forEach(function(t) { %>
           <% if (t.completed) { %>
             <h4><%= t.name %></h4>
           <% } %> 
         <% }); %>
-
-        <form class="deletebtn" action="/projects/<%= project._id %>?_method=DELETE" method="POST">
-          <button type="submit">DELETE THIS PROJECT</button>
+        </div>
+        <form action="/projects/<%= project._id %>?_method=DELETE" method="POST">
+          <button class="deletebtn" type="submit">DELETE THIS PROJECT</button>
         </form>
       </div>
     </main>
