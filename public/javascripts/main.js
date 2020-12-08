@@ -20,9 +20,9 @@ function pomodoro(evt) {
     let interval;
     let seconds = 0;
     if(evt.target.id === 'workbtn') {
-        seconds = 5;
+        seconds = 25 * 60;
     } else if (evt.target.id === 'breakbtn') {
-        seconds = 5;
+        seconds = 5 * 60;
     }
     clickStatus = true;
     interval = setInterval(function() {
@@ -35,14 +35,12 @@ function pomodoro(evt) {
            timeDisplay.innerHTML = `${minutes} : ${secs}`; 
            titleTimeDisp.innerHTML = `${minutes} : ${secs}`; 
         }
-        
         seconds--;
         if(!seconds) {
             clearInterval(interval);
             clickStatus = false;
             titleTimeDisp.innerHTML = 'Ding!';
-            timeDisplay.innerHTML = "--:--";
-            
+            timeDisplay.innerHTML = "--:--"; 
         }
     }, 1000)
 }
