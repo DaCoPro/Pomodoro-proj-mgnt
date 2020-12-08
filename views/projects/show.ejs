@@ -11,12 +11,13 @@
     </header>
 
     <main class="proj-view">
-      <div id="projects-index">
+      <div class="proj-nav">
+        <h2>Projects:</h1>
         <%- include('../partials/projnav.ejs') %>
       </div>
       
-      <div id="project-content">
-        <h1><%= project.name %></h1>
+      <div class="proj-cont">
+        <h2><%= project.name %></h1>
         <% if (project.goal) { %>
         <h2>Goal: <%= project.goal %></h2>
         <% } %>

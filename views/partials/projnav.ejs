@@ -1,7 +1,13 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
 <div id="projnav">
     <% projects.forEach(function(p) { %> 
         <% if (user && user._id.equals(p.user)) { %>
           <h3><a href="/projects/<%= p._id %>"><%=  p.name %></a></h3>
         <% } %>
     <% }); %> 
+    <form action="projects/new" method="GET">
+        <input type="submit" value="+">
+    </form>
+
 </div>
