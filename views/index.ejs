@@ -11,20 +11,39 @@
     </header>
 
     <main>
-      <h2>How Zen Squirrel Works</h2>  
-      <h3>
+      <div id="theory">
+      <h2>Pomodoro Inspired Project Management</h2>  
+      <div id="process">
+        <h2>The Process:</h2>
         <ol>
-          <li>Create your first project</li>
-          <li>Create your first task</li>
-          <li>Set a timer (25 minutes)</li>
-          <li>Stay in the zone as Zen Squirrel displays your timer and relevent tasks</li>
-          <li>Take breaks! 5 minutes every after every session, 20 after every four sessions</li>
-          <li>Check out your progress in Zen Squirrel's project summaries!</li>
+          <li>Set a goal</li>
+          <li>Set a timer</li>
+          <li>Focus</li>
+          <li>Take a break! </li>
+          <li>Get shit done.</li>
         </ol>
-      </h3> 
-      <h2>Ready to find your nut? Log in!</h2>
-      
-
+      </div> 
+      <h2>Why Pomodoro?</h2>
+      <p class="tp">Most of the time you spend doing things, you're actually distracted.
+          With the internet at your fingertips, a buzzing phone, and new 
+          problems rolling in, it's a wonder you get anything done at all! 
+      </p>
+      <p class="tp">Research has shown that you can get more done in less time if you
+          up the intensity. That means focus! The students who get the best grades
+          study less than their counterparts, but they do so with much more 
+          intention. If you've got to many things to do, or not enough time, 
+          Pomodoro is for you! 
+      </p>
+      <br>
+      <h2>Reading on Pomodoro</h2>
+      <a href="https://todoist.com/productivity-methods/pomodoro-technique">ToDoist Explains</a><br>
+      <a href="https://medium.com/@hectormunozg/complete-guide-to-the-pomodoro-technique-613d05ef60ef">Hector Explains on Medium</a><br>
+      <a href="https://www.calnewport.com/books/deep-work/">Deep Work</a>
+      </div><br>
+      <% if (!user) { %>
+        <h3>Ready to Get Shit Done?</h3>
+        <a id="login" href="/auth/google">Log In!</a>
+      <% } %>
     </main>
 
     <footer>

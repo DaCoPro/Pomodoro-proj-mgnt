@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&family=Cinzel&family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Castoro&family=Cinzel&family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
 
 html, body {
   height: 100%;
@@ -10,10 +12,20 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 header {
   background-color: #f7F8F9;
   height: 100px;
   font-size: 20px;
+}
+.zen {
+  font-family: 'Castoro', serif;
+}
+.squirrel {
+  font-family: 'Architects Daughter', cursive;
+}
+.title {
+  padding-left: 60px;
 }
 main {
   display: flex;
@@ -21,6 +33,7 @@ main {
   align-items: center;
   flex: 1 0 auto;
   background-color: #E5EAED;
+  padding: 50px;
 }
 
 footer {
@@ -34,6 +47,7 @@ footer {
   display: flex;
   align-items: center;
 }
+
 .logo {
   padding-left: 50px;
   height: 100px;
@@ -45,7 +59,7 @@ footer {
  
 }
 #navbar h1 {
-  padding-left: 50px;
+  padding: auto;
 }
 
 #pomodoro {
@@ -53,11 +67,20 @@ footer {
   flex-direction: column;
   align-items: center;
   margin: 50px;
+  font-family: 'Architects Daughter', cursive;
 }
 #timedisplay {
   font-size: 50px;
 }
 
+#theory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tp {
+  max-width: 600px;
+}
 
 
 
@@ -71,6 +94,7 @@ a:hover {
   color: red;
 }
 
+
 .proj-view {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -80,6 +104,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 .proj-nav {
   display: flex;
