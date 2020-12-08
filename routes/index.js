@@ -7,6 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+
+
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google',
