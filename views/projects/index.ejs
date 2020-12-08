@@ -10,18 +10,13 @@
       <%- include('../partials/header.ejs') %>
     </header>
 
-    <main id="projects-body">
-        <h1>Projects</h1>
-        <% projects.forEach(function(p) { %> 
-        <% if (user && user._id.equals(p.user)) { %>
-          <h3><a href="/projects/<%= p._id %>"><%=  p.name %></a></h3>
-        <% } %>
-      <% }); %> 
-      <br>
-      <form action="/"></form>
-      <a href="/projects/new">ADD PROJECT</a>
-      
+    <main class="proj-view">
+      <div id="projects-index">
+        <%- include('../partials/projnav.ejs') %>
+      </div>
+      <div id="projects-content">
 
+      </div>
     </main>
 
     <footer>

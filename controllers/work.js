@@ -5,5 +5,7 @@ module.exports = {
 }
 
 function show(req, res) {
-    res.render('work', {title: 'Work'})
+    Project.find({}, function(err, projects) {
+        res.render('work', {title: 'Work', projects})
+    });
 }

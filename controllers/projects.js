@@ -22,10 +22,11 @@ function newProject(req, res) {
 }
 
 function show(req, res) {
-    Project.findById(req.params.id, function(err, project) {
-        res.render('projects/show', {title: "Project Details", project});
+    Project.find({}, function(err, projects) {
+        Project.findById(req.params.id, function(err, project) {
+            res.render('projects/show', {title: "Project Details", project, projects});
+        })
     })
-
 }
 
 function index(req, res) {

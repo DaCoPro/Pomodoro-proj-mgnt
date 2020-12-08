@@ -12,13 +12,22 @@
     </header>
 
     <main>
-      <div>
+      <div id="pomodoro">
         <h1 id="timedisplay">--:--</h1>
         <button id="workbtn">Start Work</button>
         <button id="breakbtn">Start Break</button>
-
       </div>
-      
+      <div>
+        <h1 id="projList">projects</h1>
+        <label>Project:</label>
+        <select>
+            <% projects.forEach(function(p) { %> 
+            <option><%= p.name %></option>
+            <% }) %>
+        </select> 
+        <label>Task:</label>
+        <select></select>
+      </div>
 
     </main>
 

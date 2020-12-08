@@ -1,12 +1,20 @@
+//-------------------------------------------------EVENT LISTENERS
+
 document.getElementById("workbtn")
-    .addEventListener('click', clickBtn);
+    .addEventListener("click", pomodoro);
 document.getElementById("breakbtn")
-    .addEventListener('click', clickBtn);
+    .addEventListener("click", pomodoro);
+document.getElementById("projList")
+    .addEventListener("click", projClick);
+
+//-------------------------------------------------CACHE
 
 let clickStatus = false;
 let timeDisplay = document.getElementById("timedisplay");
 
-function clickBtn(evt) {
+//-------------------------------------------------FUNCTIONS
+
+function pomodoro(evt) {
     if (clickStatus) return;
     let interval;
     let seconds = 0;
@@ -28,5 +36,8 @@ function clickBtn(evt) {
     }, 1000)
 }
 
+function projClick(evt) {
+    console.log(projects);
+}
 
 
