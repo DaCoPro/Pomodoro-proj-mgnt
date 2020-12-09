@@ -11,8 +11,8 @@
     </header>
 
     <main class="proj-view">
-      <div class="proj-nav">
-        <h2>Projects:</h1>
+      <div id="s" class="proj-nav">
+        <h2><a href="/projects">Projects:</a></h1>
         <%- include('../partials/projnav.ejs') %>
       </div>
       
@@ -40,7 +40,12 @@
       <div class="list">
         <h2>Notes:</h2>
         <% project.notes.forEach(function(n) { %>
-          <h4><%= n.content %></h4>
+          <h4>
+          <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>&nbsp;
+            <%= n.content %>
+          </form>
+          </h4>
         <% }); %>
         <form action="/projects/<%= project._id %>/notes" method="POST">
           <input type="text" name="content">
