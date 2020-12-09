@@ -27,5 +27,5 @@ Zen Squirrel is a MongoDB Express app. It's a collection of JS, CSS, and HTML, t
 - Remove buttons from show view! (Clean up UI)
 - Drag and drop prioritization for tasks
 - Notification bell
-- Record of time spent working for User
+- Record of time spent working for user
 - Record of time spent working for project

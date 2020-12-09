@@ -113,3 +113,6 @@ a:hover {
 #s {
   border-style: solid;
 }
+#xmarg {
+  margin: 50px;
+}
