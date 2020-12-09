@@ -17,21 +17,22 @@
       </div>
       
       <div class="proj-cont">
+        
         <h2><%= project.name %></h1>
         <% if (project.goal) { %>
-        <h2>Goal: <%= project.goal %></h2>
+        <h3>Goal: <%= project.goal %></h3>
         <% } %>
         <div class="list">
         <h2>Tasks:</h2>
         <% project.tasks.forEach(function(t) { %>
           <% if (!t.completed) { %>
           <form action="/tasks/<%= t._id %>?_method=PUT" method="POST">
-            <h4><input type="submit" value=" ">&nbsp;&nbsp;<%= t.name %></h4>
+            <h4><input autocomplete="off" type="submit" value=" ">&nbsp;&nbsp;<%= t.name %></h4>
           </form>
           <% } %> 
         <% }); %>
         <form action="/projects/<%= project._id %>/tasks" method="POST">
-          <input type="text" name="name">
+          <input autocomplete="off" type="text" name="name">
           <input type="submit" value="+">
         </form>
       </div>
@@ -48,13 +49,13 @@
           </h4>
         <% }); %>
         <form action="/projects/<%= project._id %>/notes" method="POST">
-          <input type="text" name="content">
+          <input autocomplete="off" type="text" name="content">
           <input type="submit" value="+">
         </form>
       </div>
         <br>
         <br>
-        <div class="list">
+        <div class="list" id="completed">
         <h2>Completed Tasks:</h2>
         <% project.tasks.forEach(function(t) { %>
           <% if (t.completed) { %>
@@ -66,6 +67,7 @@
           <button class="deletebtn" type="submit">DELETE THIS PROJECT</button>
         </form>
       </div>
+      
     </main>
     <footer>
       <%- include('../partials/footer.ejs') %>
