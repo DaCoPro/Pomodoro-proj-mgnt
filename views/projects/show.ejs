@@ -26,7 +26,7 @@
         <% project.tasks.forEach(function(t) { %>
           <% if (!t.completed) { %>
           <form action="/tasks/<%= t._id %>?_method=PUT" method="POST">
-            <h4><input type="submit" value="done"><%= t.name %></h4>
+            <h4><input type="submit" value=" ">&nbsp;&nbsp;<%= t.name %></h4>
           </form>
           <% } %> 
         <% }); %>

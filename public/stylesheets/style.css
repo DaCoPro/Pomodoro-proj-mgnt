@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Castoro&family=Cinzel&family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Castoro&family=Cinzel&family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=ZCOOL+XiaoWei&display=swap');
 
 html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-
 }
 body {
   margin: 0px;
   display: flex;
   flex-direction: column;
 }
-
 header {
   background-color: #f7F8F9;
   height: 100px;
   font-size: 20px;
 }
 .zen {
-  font-family: 'Castoro', serif;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 50px;
 }
 .squirrel {
   font-family: 'Architects Daughter', cursive;
@@ -35,7 +35,6 @@ main {
   background-color: #E5EAED;
   padding: 50px;
 }
-
 footer {
   width: 100%;
   text-align: center;
@@ -47,7 +46,6 @@ footer {
   display: flex;
   align-items: center;
 }
-
 .logo {
   padding-left: 50px;
   height: 100px;
@@ -56,12 +54,10 @@ footer {
   margin-left: auto;
   padding-right: 50px;
   font-size: 20px;
- 
 }
 #navbar h1 {
   padding: auto;
 }
-
 #pomodoro {
   display: flex;
   flex-direction: column;
@@ -72,7 +68,6 @@ footer {
 #timedisplay {
   font-size: 50px;
 }
-
 #theory {
   display: flex;
   flex-direction: column;
@@ -81,9 +76,6 @@ footer {
 .tp {
   max-width: 600px;
 }
-
-
-
 a {
   color: black;
 }
@@ -93,8 +85,6 @@ a:link {
 a:hover {
   color: red;
 }
-
-
 .proj-view {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -119,5 +109,8 @@ a:hover {
   background-color: red;
   margin-top: 40px;
   margin-bottom: 20px;
+}
+#workbtns {
+  
 }
 
